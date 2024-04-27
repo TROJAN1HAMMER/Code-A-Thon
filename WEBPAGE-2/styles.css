@@ -127,3 +127,11 @@ th {
     background-color: #2196f3; /* Blue background on hover */
     color: white; /* White text on hover */
 }
+
+/* Thank-You Message Styling */
+#thankYouMessage {
+    background-color: #e0f7fa; /* Light teal background */
+    padding: 20px; /* Padding for thank-you message */
+    border: 1px solid #0097a7; /* Light blue border */
+    border-radius: 10px; /* Rounded corners */
+}
