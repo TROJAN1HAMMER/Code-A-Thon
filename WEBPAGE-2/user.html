@@ -3,35 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>User Page - Online Voting System</title>
+    <link rel="icon" type="image/png" href="favicon.png"> <!-- Favicon -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome -->
     <link rel="stylesheet" href="styles.css"> <!-- Custom CSS -->
     <script src="scripts.js"></script> <!-- Custom JavaScript -->
 </head>
 <body>
     <div class="container mt-5">
-        <h2>User Information</h2>
-        <p>Welcome to the User Page. Please enter your details to proceed to the voting page.</p>
-        
+        <h2 class="text-center text-primary"><i class="fas fa-user-cog"></i> User Information</h2> <!-- Icon with vibrant color -->
+        <p class="text-center text-muted">Welcome to the User Page. Please enter your details to proceed to the voting page.</p>
+
         <!-- User Information Form -->
         <form id="userForm" onsubmit="return validateUserForm()"> <!-- JavaScript validation -->
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+            <div class="row"> <!-- Bootstrap grid system for clean layout -->
+                <div class="col-md-6"> <!-- Left column -->
+                    <div class="form-group">
+                        <label for="name" class="text-success"><i class="fas fa-user"></i> Name:</label> <!-- Icon with green label -->
+                        <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your full name">
+                        <small class="form-text text-danger" id="nameError" style="display: none;">Invalid name. Only alphabets are allowed.</small> <!-- Inline error message -->
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="text-success"><i class="fas fa-phone"></i> Phone Number:</label> <!-- Icon with green label -->
+                        <input type="tel" class="form-control" id="phone" name="phone" required pattern="\d{10}" placeholder="10-digit phone number"> <!-- Pattern validation -->
+                        <small class="form-text text-danger" id="phoneError" style="display: none;">Invalid phone number. Enter a 10-digit phone number.</small> <!-- Inline error message -->
+                    </div>
+                </div>
+                <div class="col-md-6"> <!-- Right column -->
+                    <div class="form-group">
+                        <label for="voterId" class="text-success"><i class="fas fa-id-card"></i> Voter ID:</label> <!-- Icon with green label -->
+                        <input type="text" class="form-control" id="voterId" name="voterId" required placeholder="Enter your voter ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="age" class="text-success"><i class="fas fa-calendar-alt"></i> Age:</label> <!-- Icon with green label -->
+                        <input type="number" class="form-control" id="age" name="age" required min="18" placeholder="Must be 18 or older">
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="voterId">Voter ID:</label>
-                <input type="text" class="form-control" id="voterId" name="voterId" required>
+            <div class="text-center mt-4"> <!-- Center the submit button with spacing -->
+                <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-check"></i> Submit</button> <!-- Icon and larger button -->
             </div>
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="text" class="form-control" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" class="form-control" id="age" name="age" required min="0">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
+        <!-- Additional User Features -->
+        <div class="card mt-5 border-primary"> <!-- Card with blue border -->
+            <div class="card-body text-center">
+                <h3 class="text-info">User Features</h3> <!-- Light blue heading -->
+                <p>Manage your profile information, update details, and view your voting history.</p>
+                <button class="btn btn-outline-info" data-toggle="collapse" data-target="#votingHistory">View Voting History</button> <!-- Interactive collapsible button -->
+            </div>
+        </div>
+
+        <!-- Collapsible Voting History Section -->
+        <div id="votingHistory" class="collapse mt-3"> <!-- Collapsible section with transition -->
+            <div class="card card-body">
+                <h4>Your Voting History</h4>
+                <p>Here you can see your past voting records and results.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>

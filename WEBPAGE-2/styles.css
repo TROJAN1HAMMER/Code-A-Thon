@@ -1,128 +1,72 @@
 /* General body styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    background-color: #f9f9f9; /* Light gray background */
+    background-color: #f0f2f5; /* Light gray background */
     margin: 0;
     padding: 0;
-}
-
-/* Navigation bar styling */
-.navbar {
-    background-color: #f8f9fa; /* Light background */
-}
-
-.navbar a {
-    color: #333; /* Dark gray text for contrast */
-    text-decoration: none; /* No underline */
-}
-
-.navbar a:hover {
-    background-color: #e2e6ea; /* Light hover effect */
-    border-radius: 5px; /* Slight rounding */
-}
-
-/* Jumbotron (Hero Section) styles */
-.jumbotron {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('india-flag.jpg'); /* Gradient for readability */
-    background-size: cover;
-    color: white; /* White text for contrast */
-    padding: 60px; /* Padding for spacing */
-}
-
-.jumbotron h1 {
-    font-size: 36px; /* Large font size for heading */
-}
-
-.jumbotron p {
-    font-size: 18px; /* Slightly larger font */
-}
-
-.jumbotron .btn {
-    font-size: 18px; /* Larger font for buttons */
-    padding: 10px 20px; /* Padding for buttons */
-    border-radius: 5px; /* Rounded corners */
-}
-
-.jumbotron .btn:hover {
-    background-color: #0056b3; /* Dark blue hover effect */
 }
 
 /* Content area styling */
 .container {
     padding: 20px; /* Padding for spacing */
+    text-align: center; /* Center-align content */
 }
 
 .container h2 {
-    color: #333; /* Dark gray for headings */
+    color: #2196f3; /* Bright blue for main headings */
+    font-size: 24px; /* Larger font for emphasis */
 }
 
-h1, h2 {
-    font-weight: bold; /* Bold font for headings */
-}
-
-p {
+.container p {
     font-size: 16px; /* Default font size */
     color: #666; /* Light gray for text */
 }
 
-/* Feature section styling */
-.row {
-    margin-top: 20px; /* Space between rows */
+.form-group {
+    margin-bottom: 15px; /* Space between form fields */
 }
 
-.row h3 {
-    color: #333; /* Dark gray for headings */
+.form-control {
+    border: 1px solid #ccc; /* Light border */
+    padding: 10px; /* Padding for form controls */
+    border-radius: 5px; /* Rounded corners */
 }
 
-.row p {
-    font-size: 16px; /* Default paragraph font size */
-    color: #666; /* Light gray for text */
+.form-control:focus {
+    border-color: #0056b3; /* Blue border on focus */
+    outline: none; /* No outline */
 }
 
-/* Transition effects for smooth interactions */
+.btn-primary {
+    background-color: #0056b3; /* Primary blue button */
+    color: white; /* White text */
+}
+
+.btn-primary:hover {
+    background-color: #004080; /* Darker shade on hover */
+}
+
+/* Transition effects */
 a, .btn {
-    transition: all 0.3s; /* Smooth transitions on hover */
+    transition: all 0.3s; /* Smooth transitions */
 }
 
 a:hover, .btn:hover {
     color: #0056b3; /* Darker blue on hover */
 }
 
-/* Contact section styling */
-.container .contact-info {
-    font-size: 14px; /* Smaller font for contact information */
-    color: #666; /* Light gray */
+/* Card styling */
+.card {
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    background-color: #f5f5f5; /* Light gray background */
 }
 
-.contact-info a {
-    color: #0056b3; /* Blue for links */
-    text-decoration: none; /* No underline */
+.card-body {
+    padding: 20px; /* Padding inside the card */
 }
 
-.contact-info a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Form styles for the User Page */
-.form-group {
-    margin-bottom: 15px; /* Space between form fields */
-}
-
-.form-control {
-    border: 1px solid #ccc; /* Light border for input fields */
-    padding: 10px; /* Padding for form controls */
-    border-radius: 5px; /* Rounded corners for form controls */
-}
-
-.form-control:focus {
-    border-color: #0056b3; /* Border color on focus */
-    outline: none; /* No outline on focus */
-}
-
-.btn-primary {
-    background-color: #0056b3; /* Primary button color */
-}
-
-.btn-primary:hover {
-    background-color: #004080; /* Darker shade on hover */
+/* Collapsible section styling */
+.collapse {
+    transition: height 0.3s ease; /* Smooth transition for collapsible sections */
 }
