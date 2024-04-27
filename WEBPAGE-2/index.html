@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Election Page of India</title>
+    <link rel="icon" type="image/png" href="favicon.png"> <!-- Favicon -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="styles.css"> <!-- Additional custom CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Custom CSS -->
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="india-logo.png" alt="India Logo" style="height: 30px; vertical-align: middle;"> <!-- India logo -->
             Election Page of India
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,9 +31,12 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="jumbotron jumbotron-fluid text-center" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('india-flag.jpg') no-repeat center center; background-size: cover; color: white;">
+    <!-- Hero Section with Image Above the Text -->
+    <div class="jumbotron jumbotron-fluid text-center" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); color: white;">
         <div class="container">
+            <!-- Image above the welcome text -->
+            <img src="Election.png" alt="Election Commission of India Logo" style="height: 100px; margin-bottom: 20px;"> <!-- Add the appropriate image URL -->
+            
             <h1>Welcome to the Election Page of India</h1>
             <p>Your trusted platform for voting and election results. Cast your vote, see the results, and be a part of India's democratic process.</p>
             <a class="btn btn-primary btn-lg" href="voting.html">Vote Now</a>
@@ -44,19 +47,16 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-md-4 text-center">
-                <img src="user-icon.png" alt="User Management" style="height: 50px;"> <!-- User icon -->
                 <h3>User Management</h3>
                 <p>Manage your profile, view voting history, and update your information.</p>
                 <a href="user.html" class="btn btn-outline-primary">Go to User Page</a>
             </div>
             <div class="col-md-4 text-center">
-                <img src="secure-voting-icon.png" alt="Secure Voting" style="height: 50px;"> <!-- Secure voting icon -->
                 <h3>Secure Voting</h3>
-                <p>Vote securely with our state-of-the-art technology ensuring fairness and accuracy.</p>
+                <p>Vote securely with state-of-the-art technology ensuring fairness and accuracy.</p>
                 <a href="voting.html" class="btn btn-outline-primary">Go to Voting Page</a>
             </div>
             <div class="col-md-4 text-center">
-                <img src="results-icon.png" alt="Election Results" style="height: 50px;"> <!-- Election results icon -->
                 <h3>Election Results</h3>
                 <p>View live election results and stay informed about the latest updates.</p>
                 <a href="display.html" class="btn btn-outline-primary">Go to Display Page</a>
@@ -77,6 +77,12 @@
         <p>Email: <a href="mailto:support@electionpageofindia.com">support@electionpageofindia.com</a></p>
         <p>Phone: 1800-123-4567</p>
     </div>
+
+    <!-- Footer Section -->
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+        <p>&copy; 2024 Election Page of India. All rights reserved.</p>
+        <p>For inquiries, contact: <a href="mailto:support@electionpageofindia.com" style="color: white;">support@electionpageofindia.com</a></p>
+    </footer>
 
     <!-- Bootstrap JavaScript and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
