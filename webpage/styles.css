@@ -1,0 +1,47 @@
+/* Basic styling for the login/signup page */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+input {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
