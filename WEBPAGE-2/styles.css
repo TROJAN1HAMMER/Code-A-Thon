@@ -1,0 +1,105 @@
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    background-color: #f9f9f9; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styling */
+.navbar {
+    background-color: #f8f9fa; /* Light background for minimalism */
+}
+
+.navbar a {
+    color: #333; /* Dark gray text for contrast */
+    text-decoration: none; /* No underline for a cleaner look */
+}
+
+.navbar a:hover {
+    background-color: #e2e6ea; /* Light hover effect */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+/* Jumbotron (Hero Section) styles */
+.jumbotron {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('india-flag.jpg') no-repeat center center; /* Gradient for readability */
+    background-size: cover;
+    color: white; /* White text for contrast */
+    padding: 60px; /* Padding for spacing */
+}
+
+.jumbotron h1 {
+    font-size: 36px; /* Large font size for heading */
+}
+
+.jumbotron p {
+    font-size: 18px; /* Slightly larger font for subheading */
+}
+
+.jumbotron .btn {
+    font-size: 18px; /* Larger font for button text */
+    padding: 10px 20px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners for smooth edges */
+}
+
+.jumbotron .btn:hover {
+    background-color: #0056b3; /* Dark blue hover effect */
+}
+
+/* Content area styling */
+.container {
+    text-align: center; /* Center-align content */
+    padding: 20px; /* Padding for spacing */
+}
+
+.container h2 {
+    color: #333; /* Dark gray for headings */
+}
+
+h1, h2 {
+    font-weight: bold; /* Bold font for headings */
+}
+
+p {
+    font-size: 16px; /* Default font size for paragraphs */
+    color: #666; /* Light gray for text */
+}
+
+/* Feature section styling */
+.row {
+    margin-top: 20px; /* Space between rows */
+}
+
+.row h3 {
+    color: #333; /* Dark gray for headings */
+}
+
+.row p {
+    font-size: 16px; /* Default paragraph font size */
+    color: #666; /* Light gray for text */
+}
+
+/* Transition effects for smooth interactions */
+a, .btn {
+    transition: all 0.3s; /* Smooth transitions on hover */
+}
+
+a:hover, .btn:hover {
+    color: #0056b3; /* Darker blue on hover for links and buttons */
+}
+
+/* Contact section styling */
+.container .contact-info {
+    font-size: 14px; /* Smaller font size for contact information */
+    color: #666; /* Light gray for contact text */
+}
+
+.contact-info a {
+    color: #0056b3; /* Blue for links */
+    text-decoration: none; /* No underline for a clean look */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}

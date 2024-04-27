@@ -6,7 +6,7 @@ class voter
     char name[20];
     char vid[20];
     int reg;
-    int vot;
+    char vot[20];
     int v = 0;
 
 public:
@@ -82,9 +82,9 @@ class politician
 public:
     void getdata()
     {
-        cout << "enter politician name:" << endl;
+        cout << "enter party name:" << endl;
         cin >> pname;
-        cout << "enter the politician id:" << endl;
+        cout << "enter the party id:" << endl;
         cin >> pid;
         cout << "enter the state:" << endl;
         cout << "1.Andhra Pradesh" << endl;
@@ -133,7 +133,7 @@ public:
 politician Poli[1000];
 void vote(voter A)
 {
-    int i;
+    int i;char bt;
     switch (A.reg)
     {
     case 1:
@@ -144,201 +144,596 @@ void vote(voter A)
             if (Poli[i].reg == 1)
             {
                 cout << Poli[i].pname << endl;
-            }
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
         }
-        cin >> A.vot;
         break;
     }
-    case 2:
+            case 2:
     {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 2)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 3:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 3)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 4:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 4)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 5:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 5)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 6:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 6)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 7:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 7)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 8:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 8)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 9:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 9)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 10:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 10)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 11:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 11)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 12:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 12)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 13:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 13)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 14:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 14)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 15:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 15)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 16:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 16)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 17:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 17)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 18:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 18)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 19:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 19)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 20:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 20)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 21:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 21)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 22:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 22)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 23:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 23)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 24:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 24)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 25:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 25)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 26:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 26)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 27:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 27)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 28:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 28)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 29:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 29)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 30:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 30)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 31:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 31)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 32:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 32)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
+        break;
+    }case 33:
+    {
+        cout << "please choose :-" << endl;
+        for (i = 0; i < 1000; i++)
+        {
+            if (Poli[i].reg == 33)
+            {
+                cout << Poli[i].pname << endl;
+                cout<<"vote for him Y?N:"<<endl;
+                cin>>bt;
+                if(bt=='y'||bt=='Y'){
+                    Poli[i].votes++;
+                    strcpy(A.vot,Poli[i].pname);
+                    break;
+            }else{
+                    strcpy(A.vot,'INDEPENDANT');
+        }
         break;
     }
-    case 3:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 4:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 5:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 6:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 7:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 8:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 9:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 10:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 11:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 12:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 13:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 14:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 15:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 16:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 17:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 18:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 19:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 20:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 21:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 22:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 23:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 24:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 25:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 26:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 27:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 28:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 29:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 30:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 31:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 32:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
-        break;
-    }
-    case 33:
-    {
-        cout << "please choose :-\n1.BJP\n2.CONGRESS\n3.AAP\n4.INDEPENDENT" << endl;
-        cin >> A.vot;
+                    strcpy(A.vot,'INDEPENDANT');
+        }
         break;
     }
     }
