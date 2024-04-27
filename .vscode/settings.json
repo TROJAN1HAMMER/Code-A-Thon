@@ -72,5 +72,8 @@
       "password": "balaharshith",
       "connectionTimeout": 30
     }
-  ]
+  ],
+  "files.associations": {
+    "ostream": "cpp"
+  }
 }

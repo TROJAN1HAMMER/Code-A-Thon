@@ -5,70 +5,62 @@
     <title>Voting Page - Online Voting System</title>
     <link rel="icon" href="./img/flag.jpg" type="image/x-icon"> <!-- Favicon link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome -->
     <link rel="stylesheet" href="styles.css"> <!-- Custom CSS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> <!-- Font Awesome -->
-    <script src="scripts.js"></script> <!-- Custom JavaScript -->
+    <script src="scripts.js"></script> <!-- External JavaScript -->
 </head>
 <body>
     <div class="container mt-5">
-        <h2 class="text-primary text-center"><i class="fas fa-vote-yea"></i> Vote Now</h2>
-        <p class="text-muted text-center">Please cast your vote below.</p>
+        <h2 class="text-primary text-center">Vote for Your Favorite Candidate</h2> <!-- Main title -->
+        <p class="text-muted text-center">Select your candidate and submit your vote.</p>
 
         <!-- Voting Form -->
-        <form id="votingForm" onsubmit="submitVotingData(); return false;"> <!-- Submit to back-end -->
-            <div class="card"> <!-- Card to contain the form -->
-                <div class="card-body text-left"> <!-- Align content to the left -->
-                    <h3>Select Your Candidate:</h3>
-                    <!-- Radio buttons for selecting a candidate -->
-                    <div class="form-group">
-                        <div class="custom-control custom-radio"> <!-- Custom radio button -->
-                            <input type="radio" id="candidate1" name="candidate" class="custom-control-input" value="Candidate 1">
-                            <label class="custom-control-label" for="candidate1">Candidate 1</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="candidate2" name="candidate" class="custom-control-input" value="Candidate 2">
-                            <label class="custom-control-label" for="candidate2">Candidate 2</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="candidate3" name="candidate" class="custom-control-input" value="Candidate 3">
-                            <label class="custom-control-label" for="candidate3">Candidate 3</label>
-                        </div>
-                    </div>
+        <form id="votingForm" onsubmit="submitVotingData(); return false;"> <!-- Prevent default form submission -->
+            <div class="vertical-boxes"> <!-- Use a custom class for vertical arrangement -->
+                <!-- Box for Candidate A -->
+                <div class="box">
+                    <h3>Candidate A</h3>
+                    <p>Party 1</p>
+                    <button type="button" class="btn btn-primary" onclick="voteFor('Candidate A')">Vote</button> <!-- Vote button -->
                 </div>
-            </div>
 
-            <div class="text-center mt-4">
-                <button type="submit" class="btn btn-success btn-lg"><i class="fas fa-paper-plane"></i> Submit Vote</button> <!-- Submit the form -->
-                <small class="form-text text-danger" id="votingError" style="display: none;">Please select a candidate before submitting.</small> <!-- Inline error message -->
+                <!-- Box for Candidate B -->
+                <div class="box">
+                    <h3>Candidate B</h3>
+                    <p>Party 2</p>
+                    <button type="button" class="btn btn-primary" onclick="voteFor('Candidate B')">Vote</button>
+                </div>
+
+                <!-- Box for Candidate C -->
+                <div class="box">
+                    <h3>Candidate C</h3>
+                    <p>Party 3</p>
+                    <button type="button" class="btn btn-primary" onclick="voteFor('Candidate C')">Vote</button>
+                </div>
+
+                <!-- Box for Candidate D -->
+                <div class="box">
+                    <h3>Candidate D</h3>
+                    <p>Party 4</p>
+                    <button type="button" class="btn btn-primary" onclick="voteFor('Candidate D')">Vote</button>
+                </div>
+
+                <!-- Box for Candidate E -->
+                <div class="box">
+                    <h3>Candidate E</h3>
+                    <p>Party 5</p>
+                    <button type="button" class="btn btn-primary" onclick="voteFor('Candidate E')">Vote</button>
+                </div>
             </div>
         </form>
     </div>
 
     <script>
-    function submitVotingData() {
-        const form = document.getElementById('votingForm');
-        const data = {
-            candidate: document.querySelector('input[name="candidate"]:checked').value // Selected candidate
-        };
-
-        fetch('/api/vote', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(result => {
-            if (result.error) {
-                console.error('Error:', result.error);
-            } else {
-                console.log('Success:', result.message);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+    function voteFor(candidate) {
+        // Function to handle voting logic
+        console.log('Voting for', candidate);
+        alert(`Your vote has been cast for ${candidate}`);
+        // Perform additional logic for voting
     }
     </script>
 </body>

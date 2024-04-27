@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>User Page - Online Voting System</title>
-    <link rel="icon" href="./img/flag.jpg" type="image/x-icon"> <!-- Favicon link -->
+    <link rel="icon" href="./img/flag.jpg" type="image/x-icon"> <!-- Favicon -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome -->
     <link rel="stylesheet" href="styles.css"> <!-- Custom CSS -->
-    <script src="scripts.js"></script> <!-- Custom JavaScript -->
+    <script src="scripts.js"></script> <!-- JavaScript for form handling -->
 </head>
 <body>
     <div class="container mt-5">
@@ -17,61 +18,59 @@
         <form id="userForm" onsubmit="submitUserData(); return false;"> <!-- Prevent default form submission -->
             <div class="row">
                 <div class="col-md-6">
+                    <!-- Name with Icon -->
                     <div class="form-group">
-                        <label for="name" class="text-success"><i class="fas fa-user"></i> Name:</label> 
-                        <input type="text" class="form-control" id="name" name="name" required>
+                        <label for="name" class="text-success"><i class="fas fa-user"></i> Name:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
                     </div>
+
+                    <!-- Phone Number with Icon -->
                     <div class="form-group">
                         <label for="phone" class="text-success"><i class="fas fa-phone"></i> Phone Number:</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <input type="tel" class="form-control" id="phone" name="phone" required pattern="\d{10}" title="Please enter a 10-digit phone number">
+                        </div>
                     </div>
                 </div>
+
                 <div class="col-md-6">
+                    <!-- Voter ID with Icon -->
                     <div class="form-group">
-                        <label for="voterId" class="text-success"><i class="fas fa-id-card"></i> Voter ID:</label> 
-                        <input type="text" class="form-control" id="voterId" name="voterId" required>
+                        <label for="voterId" class="text-success"><i class="fas fa-id-card"></i> Voter ID:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="voterId" name="voterId" required pattern="[a-zA-Z0-9]+" title="Voter ID should be alphanumeric">
+                        </div>
                     </div>
+
+                    <!-- Age with Icon -->
                     <div class="form-group">
                         <label for="age" class="text-success"><i class="fas fa-calendar-alt"></i> Age:</label>
-                        <input type="number" class="form-control" id="age" name="age" required min="18">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                            </div>
+                            <input type="number" class="form-control" id="age" name="age" required min="18" title="You must be at least 18 years old">
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Submit Button -->
             <div class="text-center mt-4">
                 <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Submit</button>
             </div>
         </form>
     </div>
-
-    <script>
-    function submitUserData() {
-        const form = document.getElementById('userForm');
-        const data = {
-            name: form.name.value,
-            voterId: form.voterId.value,
-            phone: form.phone.value,
-            age: form.age.value
-        };
-
-        fetch('/api/users', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(result => {
-            if (result.error) {
-                console.error('Error:', result.error);
-            } else {
-                console.log('Success:', result.message);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    }
-    </script>
 </body>
 </html>
