@@ -19,7 +19,7 @@ public:
         cout << "enter the state:" << endl;
         cout << "1.Andhra Pradesh" << endl;
         cout << "2.Arunachal Pradesh" << endl;
-        cout << "3Assam" << endl;
+        cout << "3.Assam" << endl;
         cout << "4.Bihar" << endl;
         cout << "5.Chhattisgarh" << endl;
         cout << "6.Goa" << endl;

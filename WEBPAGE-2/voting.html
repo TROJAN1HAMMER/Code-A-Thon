@@ -3,14 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Voting Page - Online Voting System</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Custom CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> <!-- Font Awesome -->
+    <script src="scripts.js"></script> <!-- JavaScript for validation -->
 </head>
 <body>
     <div class="container mt-5">
-        <h2>Vote Now</h2>
-        <p>Welcome to the Voting Page. Please cast your vote below.</p>
-        <!-- Voting form or related content -->
+        <h2 class="text-primary text-center"><i class="fas fa-vote-yea"></i> Vote Now</h2> <!-- Icon with vibrant color -->
+        <p class="text-muted text-center">Welcome to the Voting Page. Please cast your vote below.</p>
+
+        <!-- Voting Form -->
+        <form id="votingForm" onsubmit="return validateVotingForm()"> <!-- JavaScript validation -->
+            <div class="card"> <!-- Card to contain the form -->
+                <div class="card-body text-left"> <!-- Align content to the left -->
+                    <h3>Select Your Candidate:</h3>
+                    <!-- Radio buttons for selecting a candidate -->
+                    <div class="form-group">
+                        <div class="custom-control custom-radio"> <!-- Custom radio button -->
+                            <input type="radio" id="candidate1" name="candidate" class="custom-control-input" value="Candidate 1">
+                            <label class="custom-control-label" for="candidate1">Candidate 1</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="candidate2" name="candidate" class="custom-control-input" value="Candidate 2">
+                            <label class="custom-control-label" for="candidate2">Candidate 2</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="candidate3" name="candidate" class="custom-control-input" value="Candidate 3">
+                            <label class="custom-control-label" for="candidate3">Candidate 3</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4"> <!-- Center the submit button -->
+                <button type="submit" class="btn btn-success btn-lg"><i class="fas fa-paper-plane"></i> Submit Vote</button> <!-- Icon with larger button -->
+                <small class="form-text text-danger" id="votingError" style="display: none;">Please select a candidate before submitting.</small> <!-- Inline error message -->
+            </div>
+        </form>
     </div>
 </body>
 </html>

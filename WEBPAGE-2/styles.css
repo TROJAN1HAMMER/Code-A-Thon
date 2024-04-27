@@ -1,7 +1,7 @@
 /* General body styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    background-color: #f0f2f5; /* Light gray background */
+    background-color: #f0f2f5; /* Light gray background for a clean look */
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,12 @@ body {
 
 .container h2 {
     color: #2196f3; /* Bright blue for main headings */
-    font-size: 24px; /* Larger font for emphasis */
+    font-size: 24px; /* Larger font size for emphasis */
+}
+
+.container h3 {
+    color: #666; /* Lighter gray for secondary headings */
+    font-size: 20px; /* Slightly smaller than main headings */
 }
 
 .container p {
@@ -34,7 +39,7 @@ body {
 
 .form-control:focus {
     border-color: #0056b3; /* Blue border on focus */
-    outline: none; /* No outline */
+    outline: none; /* No outline on focus */
 }
 
 .btn-primary {
@@ -44,6 +49,15 @@ body {
 
 .btn-primary:hover {
     background-color: #004080; /* Darker shade on hover */
+}
+
+.btn-success {
+    background-color: #28a745; /* Success green button */
+    color: white; /* White text */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
 }
 
 /* Transition effects */
@@ -69,4 +83,47 @@ a:hover, .btn:hover {
 /* Collapsible section styling */
 .collapse {
     transition: height 0.3s ease; /* Smooth transition for collapsible sections */
+}
+
+/* Table styling */
+.table {
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space below the table */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9; /* Light gray for striped rows */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e0e0e0; /* Light gray on hover */
+}
+
+th {
+    color: #2196f3; /* Bright blue for table headers */
+    font-weight: bold; /* Bold headers */
+}
+
+/* Custom control styling */
+.custom-control {
+    margin-bottom: 10px; /* Space between radio buttons */
+}
+
+.custom-control-input:checked ~ .custom-control-label {
+    color: #0056b3; /* Change label color when selected */
+}
+
+.custom-control-input:checked ~ .custom-control-label:before {
+    border-color: #0056b3; /* Border color for selected radio button */
+}
+
+/* Outline button styling */
+.btn-outline-primary {
+    border-color: #2196f3; /* Blue border for outline button */
+    color: #2196f3; /* Blue text for outline button */
+}
+
+.btn-outline-primary:hover {
+    background-color: #2196f3; /* Blue background on hover */
+    color: white; /* White text on hover */
 }
