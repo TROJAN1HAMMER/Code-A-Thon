@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>User Page - Online Voting System</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Custom CSS -->
+    <script src="scripts.js"></script> <!-- Custom JavaScript -->
 </head>
 <body>
     <div class="container mt-5">
         <h2>User Information</h2>
-        <p>Welcome to the User Page. Here you can manage user accounts and view user information.</p>
-        <!-- Additional content or user-related features -->
+        <p>Welcome to the User Page. Please enter your details to proceed to the voting page.</p>
+        
+        <!-- User Information Form -->
+        <form id="userForm" onsubmit="return validateUserForm()"> <!-- JavaScript validation -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="voterId">Voter ID:</label>
+                <input type="text" class="form-control" id="voterId" name="voterId" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" name="age" required min="0">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 </body>
 </html>
