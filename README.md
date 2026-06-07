@@ -72,10 +72,10 @@ This project implements a **secure, scalable online voting system** inspired by 
 ```
 ┌─────────────────────────────────────────────────────┐
 │           CLIENT LAYER (Frontend)                   │
-├──────────────────┬──────────────┬──────────────────┤
-│   index.html     │  user.html   │  voting.html     │
-│   (Landing)      │  (Registration)  (Ballot)      │
-└────────┬─────────┴──────┬───────┴─────────┬────────┘
+├──────────────────┬──────────────┬──────────────────-┤
+│   index.html     │  user.html   │  voting.html      │
+│   (Landing)      │  (Registration)  (Ballot)        │
+└────────┬─────────┴──────┬───────┴────────-─┬───────-┘
          │ Form Submission│ Validation       │ Vote Cast
          │ Fetch API      │ Age/ID Check     │ Ballot Logic
          │ JSON           │ Phone Validation │ Selection
@@ -89,8 +89,8 @@ This project implements a **secure, scalable online voting system** inspired by 
          │  - JSON Serialization             │
          └────────────────┬──────────────────┘
                           │
-┌─────────────────────────▼──────────────────────────┐
-│        BACKEND LAYER (C++ Processing)              │
+┌─────────────────────────▼─────────────────────────┐
+│        BACKEND LAYER (C++ Processing)             │
 ├──────────────────┬─────────────┬──────────────────┤
 │ voter class      │ politician  │ vote() function  │
 │ - Validation     │ class       │ - Vote Logic     │
@@ -101,7 +101,7 @@ This project implements a **secure, scalable online voting system** inspired by 
          │ MAX 1000       │ Tally System    │
          │ Elements       │ Party Filtering │
          │                │                 │
-         └────────────────┼──────────────────┘
+         └────────────────┼─────────────────┘
                           │
          ┌────────────────▼──────────────────┐
          │    DATA LAYER                     │
@@ -402,7 +402,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Authors
 
-**TROJAN1HAMMER** (HARSHITH B)  
+**TROJAN1HAMMER** (HARSHITH B) 
+**John Pradeepraj** (Contributor)
 Full-Stack Developer | Systems Engineer | Election Technology Enthusiast
 
 - 🔗 GitHub: [@TROJAN1HAMMER](https://github.com/TROJAN1HAMMER)
