@@ -403,9 +403,8 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👨‍💻 Authors
 
 **TROJAN1HAMMER** (HARSHITH B) 
-**John Pradeepraj** (Contributor)
 Full-Stack Developer | Systems Engineer | Election Technology Enthusiast
-
+**John Pradeepraj** (Contributor)
 - 🔗 GitHub: [@TROJAN1HAMMER](https://github.com/TROJAN1HAMMER)
 - 🎯 Focus: Building scalable voting systems and democratic infrastructure
 - 💡 Interests: C++, Web Technologies, System Design, Election Security
